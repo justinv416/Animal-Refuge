@@ -231,10 +231,6 @@ li {
   }
 }
 
-.wrapperFlex {
-  display: flex;
-}
-
 .heading {
   font-family: var(--heading-font);
 }
@@ -263,7 +259,8 @@ li {
 
 @media (max-width: 480px) {
   #header {
-    background-position: center;
+    background-position: 30%;
+    height: 90vh;
   }
 }
 
@@ -327,6 +324,23 @@ li {
   height: 20%;
 }
 
+@media (max-width: 480px) {
+  .nav-social {
+    display: none;
+  }
+}
+
+.fa-bars {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .fa-bars {
+    display: block;
+    margin-top: 10px;
+  }
+}
+
 .nav-social ul {
   display: flex;
   flex-direction: column;
@@ -341,9 +355,18 @@ li {
 /* Section: Suzie's Story */
 #suzies-story {
   background-color: var(--dark-green);
-  display: flex;
-  align-items: center;
   padding: 100px 0;
+}
+
+.wrapperFlex {
+  display: flex;
+}
+
+@media (max-width: 480px) {
+  .wrapperFlex {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .suzie-img {
@@ -351,15 +374,35 @@ li {
   /* background-color: chartreuse; */
 }
 
+@media (max-width: 480px) {
+  .suzie-img {
+    width: 100%;
+  }
+}
+
 #suzies-story img {
     height: 20rem;
     margin-right: 40px;
+}
+
+@media (max-width: 480px) {
+  #suzies-story img {
+    height: 18rem;
+    margin: auto;
+    width: 100%;
+  }
 }
 
 #suzies-story h2 {
     font-size: 3rem;
     color: var(--light-green);
     text-transform: uppercase;
+}
+
+@media (max-width: 480px) {
+  #suzies-story h2 {
+    font-size: 2rem;
+  }
 }
 
 #suzies-story p {
@@ -377,12 +420,25 @@ li {
     text-transform: uppercase;
 }
 
+@media (max-width: 480px) {
+  #suzies-story button {
+    margin: auto;
+    width: 40%;
+    height: 30%;
+  }
+}
+
 .content-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 70%;
-  background-color: chocolate;
+}
+
+@media (max-width: 480px) {
+  .content-container {
+    width: 100%;
+  }
 }
 
 /* Friends section */
