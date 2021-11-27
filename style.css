@@ -1,0 +1,596 @@
+/* CSS Snippet */
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+figcaption,
+figure,
+main {
+  display: block;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+b,
+strong {
+  font-weight: inherit;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+audio,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+img {
+  border-style: none;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+textarea {
+  overflow: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+details,
+menu {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+canvas {
+  display: inline-block;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+
+/* Global Styling */
+html {
+  font-size: 125%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  font-family: var(--text-font);
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+h1,
+li {
+  text-transform: uppercase;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 2160px;
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+
+.wrapperFlex {
+  display: flex;
+}
+
+.heading {
+  font-family: var(--heading-font);
+}
+
+/* CSS Variables */
+:root {
+  /* Colors */
+  --white: #fcfcfc;
+  --light-green: #c3d3cb;
+  --black: #00000;
+  --dark-green: #152d20;
+  /* Fonts */
+  --heading-font: "Fredericka the Great", cursive;
+  --text-font: "Cormorant Garamond", serif;
+  --button-font: "Roboto", sans-serif;
+}
+
+/* Header */
+#header {
+  height: 100vh;
+  background: url(https://psd.hackeryou.com/assignment1-assets/animal-land/image-1.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+@media (max-width: 480px) {
+  #header {
+    background-position: center;
+  }
+}
+
+.headerFlex {
+  /* background: orangered; */
+  display: flex;
+  justify-content: space-between;
+}
+
+#header h1 {
+  font-size: 6rem;
+  font-weight: normal;
+  color: white;
+  line-height: 117px;
+  margin-top: 200px;
+  text-align: center;
+  width: 40%;
+  /* background-color: yellowgreen; */
+}
+
+@media (max-width: 480px) {
+  #header h1 {
+    font-size: 2rem;
+    line-height: 40px;
+    margin-top: 10px;
+  }
+}
+
+/* Navigation */
+.nav-main {
+  /* width: 100%; */
+  /* background-color: powderblue; */
+  padding: 20px;
+  height: 10px;
+  width: 30%;
+}
+
+@media (max-width: 480px) {
+  .nav-main {
+    display: none;
+  }
+}
+
+.nav-main ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-social {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  right: 0;
+  bottom: 100px;
+  width: 5%;
+  /* background-color: yellow; */
+  height: 20%;
+}
+
+.nav-social ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.nav-social i {
+  font-size: 1.3rem;
+}
+
+/* Section: Suzie's Story */
+#suzies-story {
+  background-color: var(--dark-green);
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.suzie-img {
+  width: calc(30% - 40px);
+  /* background-color: chartreuse; */
+}
+
+#suzies-story img {
+    height: 20rem;
+    margin-right: 40px;
+}
+
+#suzies-story h2 {
+    font-size: 3rem;
+    color: var(--light-green);
+    text-transform: uppercase;
+}
+
+#suzies-story p {
+    color: var(--white);
+    font-family: var(--button-font);
+    line-height: 1.5rem;
+}
+
+#suzies-story button {
+    width: 20%;
+    height: 15%;
+    background-color: var(--white);
+    font-family: var(--text-font);
+    color: var(--dark-green);
+    text-transform: uppercase;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+  background-color: chocolate;
+}
+
+/* Friends section */
+#friends {
+    padding: 100px 0;
+    background-color: var(--light-green);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#friends .wrapper {
+  background: wheat;
+}
+
+#friends h2 {
+    font-family: var(--heading-font);
+    font-size: 4rem;
+    font-weight: normal;
+    text-align: center;
+    margin: auto;
+    color: var(--dark-green);
+    margin-bottom: 50px;
+    width: 30%;
+    /* background-color: brown; */
+}
+
+.friends-gallery {
+  display: flex;
+}
+
+.friends-gallery li:nth-of-type(2) {
+  padding: 0 30px;
+}
+
+/* Links section */
+#links {
+    background: var(--dark-green);
+    padding: 100px;
+}
+
+#links ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.fas {
+  font-size: 2.5rem;
+  color: var(--white);
+}
+
+.link-container {
+  /* background-color: coral; */
+  width: 90%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-container p {
+  font-size: 1.5rem;
+  color: var(--white);
+  margin-top: 20px;
+  /* background-color: cadetblue; */
+  text-align: center;
+}
+
+/* Zebra section */
+#zebra {
+  display: flex;
+}
+
+#zebra img {
+  width: 50%;
+}
+
+#zebra .heading {
+  font-size: 2.5rem;
+  background: wheat;
+  width: 80%;
+}
+
+#zebra .content-container {
+  background-color: blueviolet;
+  width: calc(50% - 300px);
+  padding: 200px 100px 200px 200px;
+}
+
+#zebra p {
+  background: gold;
+  line-height: 30px;
+  font-family: var(--button-font);
+  margin: 30px 0 40px 0;
+}
+
+#zebra button {
+  width: 25%;
+  padding: 15px;
+  background: var(--dark-green);
+  color: var(--white);
+  border: none;
+  text-transform: uppercase;
+  font-family: var(--text-font);
+}
+
+/* Relationship section */
+#relationship {
+  display: flex;
+}
+
+#relationship .heading {
+  width: 80%;
+  font-size: 2.5rem;
+  background: wheat;
+}
+
+#relationship img {
+  width: 50%;
+}
+
+#relationship .content-container {
+  background-color: crimson;
+  width: calc(50% - 300px);
+  padding: 200px 200px 200px 100px;
+}
+
+#relationship p {
+  background: gold;
+  font-family: var(--button-font);
+  line-height: 30px;
+  margin: 30px 0 40px 0;
+}
+
+#relationship button {
+  width: 25%;
+  padding: 15px;
+  background: var(--dark-green);
+  color: var(--white);
+  border: none;
+  text-transform: uppercase;
+  font-family: var(--text-font);
+}
+
+.zebra {
+  display: flex;
+  height: 60vh;
+  width: 100%;
+}
+
+.zebra-img {
+  background: url('https://psd.hackeryou.com/assignment1-assets/animal-land/image-7.jpg');
+  background-size: cover;
+  width: 50%;
+}
+
+/* Footer */
+footer {
+  padding: 40px 0;
+  background-color: var(--dark-green);
+}
+
+footer .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: firebrick;
+}
+
+.nav-footer {
+  line-height: 30px;
+}
+
+#form {
+  background: hotpink;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form input[type='email'] {
+  width: 100%;
+  height: 30px;
+}
+
+#form input[type='submit'] {
+  background: #000;
+  color: var(--white);
+  border: none;
+  padding: 5px;
+}
+
+.contact li {
+  font-family: var(--button-font);
+  line-height: 30px;
+  text-transform: lowercase;
+}
+
+.form-controls {
+  display: flex;
+  width: 100%;
+}
+
+footer h4, footer li, footer p {
+  color: var(--white);
+}
+
+/* Background image instead and implement wrapper */
