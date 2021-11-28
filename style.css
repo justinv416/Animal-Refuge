@@ -206,7 +206,6 @@ h1, h2, h3, h4, p, ul {
 
 li {
   list-style: none;
-  font-family: var(--text-font);
 }
 
 a {
@@ -238,17 +237,17 @@ h1 {
 :root {
   /* Colors */
   --white: #fcfcfc;
+  --black: #000;
   --light-green: #c3d3cb;
-  --black: #00000;
   --dark-green: #152d20;
   /* Fonts */
   --heading-font: "Fredericka the Great", cursive;
-  --text-font: "Cormorant Garamond", serif;
-  --button-font: "Roboto", sans-serif;
+  --button-font: "Cormorant Garamond", serif;
+  --text-font: "Roboto", sans-serif;
 }
 
 /* Header */
-#header {
+header {
   height: 100vh;
   background: url(https://psd.hackeryou.com/assignment1-assets/animal-land/image-1.jpg);
   background-size: cover;
@@ -257,14 +256,13 @@ h1 {
 }
 
 @media (max-width: 480px) {
-  #header {
+  header {
     background-position: 30%;
     height: 90vh;
   }
 }
 
 .headerFlex {
-  /* background: orangered; */
   display: flex;
   justify-content: space-between;
 }
@@ -296,6 +294,7 @@ h1 {
   height: 10px;
   width: 30%;
   text-transform: uppercase;
+  font-family: var(--button-font);
 }
 
 @media (max-width: 480px) {
@@ -375,19 +374,19 @@ h1 {
   }
 }
 
-.suzie-img {
+.img-container {
   width: calc(30% - 40px);
-  /* background-color: chartreuse; */
 }
 
 @media (max-width: 480px) {
-  .suzie-img {
+  .img-container {
     width: 100%;
   }
 }
 
 #suzies-story img {
     margin-right: 40px;
+    width: 100%;
 }
 
 @media (max-width: 480px) {
@@ -400,7 +399,8 @@ h1 {
 
 #suzies-story h2 {
     font-size: 3rem;
-    color: var(--light-green);
+    color: var(--white);
+    font-weight: normal;
     text-transform: uppercase;
 }
 
@@ -413,7 +413,7 @@ h1 {
 
 #suzies-story p {
     color: var(--white);
-    font-family: var(--button-font);
+    font-family: var(--text-font);
     line-height: 1.5rem;
 }
 
@@ -421,7 +421,7 @@ h1 {
     width: 20%;
     height: 15%;
     background-color: var(--white);
-    font-family: var(--text-font);
+    font-family: var(--button-font);
     color: var(--dark-green);
     text-transform: uppercase;
 }
@@ -459,20 +459,16 @@ h1 {
     justify-content: space-around;
 }
 
-#friends .wrapper {
-  background: wheat;
-}
-
 #friends h2 {
     font-family: var(--heading-font);
-    font-size: 4rem;
+    text-transform: uppercase;
+    font-size: 3rem;
     font-weight: normal;
     text-align: center;
     margin: auto;
     color: var(--dark-green);
     margin-bottom: 50px;
     width: 30%;
-    /* background-color: brown; */
 }
 
 @media (max-width: 480px) {
@@ -487,7 +483,7 @@ h1 {
 }
 
 .friends-gallery li:nth-of-type(2) {
-  padding: 0 30px;
+  margin: 0 40px;
 }
 
 @media (max-width: 480px) {
@@ -520,13 +516,15 @@ h1 {
 }
 
 .link-container {
-  /* background-color: coral; */
-  width: 90%;
   max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.link-container:nth-of-type(1) p {
+  width: 90%;
 }
 
 @media (max-width: 480px) {
@@ -544,28 +542,35 @@ h1 {
   text-transform: uppercase;
 }
 
-/* Zebra section */
-#zebra {
+/* Zebra/Relationship sections */
+#zebra, #relationship {
   display: flex;
+  height: 70vh;
 }
 
 @media (max-width: 480px) {
   #zebra {
     flex-direction: column-reverse;
+    height: auto;
   }
-} 
 
-#zebra img {
+  #relationship {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+#zebra img, #relationship img {
   width: 50%;
 }
 
 @media (max-width: 480px) {
-  #zebra img {
+  #zebra img, #relationship img {
     width: 100%;
   }
 }
 
-#zebra .heading {
+#zebra .heading, #relationship .heading {
   font-size: 2.5rem;
   /* background: wheat; */
   color: var(--dark-green);
@@ -580,133 +585,56 @@ h1 {
   }
 }
 
-#zebra .content-container {
-  /* background-color: blueviolet; */
-  width: calc(50% - 300px);
-  padding: 200px 100px 200px 200px;
-}
-
-@media (max-width: 480px) {
-  #zebra .content-container {
-    width: 100%;
-    padding: 0;
-  }
-}
-
-#zebra p {
-  line-height: 30px;
-  font-family: var(--button-font);
-  margin: 30px 0 40px 0;
-}
-
-@media (max-width: 480px) {
-  #zebra p {
-    text-align: center;
-  }
-}
-
-#zebra button {
-  width: 25%;
-  padding: 15px;
-  background: var(--dark-green);
-  color: var(--white);
-  border: none;
-  text-transform: uppercase;
-  font-family: var(--text-font);
-}
-
-@media (max-width: 480px) {
-  #zebra button {
-    width: 40%;
-  }
-}
-
-/* Relationship section */
-#relationship {
-  display: flex;
-}
-
-@media (max-width: 480px) {
-  #relationship {
-    flex-direction: column;
-  }
-}
-
-#relationship .heading {
-  width: 80%;
-  font-size: 2.5rem;
-}
-
-@media (max-width: 480px) {
-  #relationship .heading {
-    font-size: 2rem;
-  }
-}
-
-#relationship img {
-  width: 50%;
-}
-
-@media (max-width: 480px) {
-  #relationship img {
-    width: 100%;
-  }
-}
-
+#zebra .content-container, 
 #relationship .content-container {
-  width: calc(50% - 300px);
-  padding: 200px 200px 200px 100px;
+  /* background-color: blueviolet; */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* padding: 200px 100px 200px 200px; */
+}
+
+#zebra .wrapper, #relationship .wrapper {
+  width: 80%;
+  padding: 0 15%;
 }
 
 @media (max-width: 480px) {
+  #zebra .content-container, 
   #relationship .content-container {
     width: 100%;
     padding: 0;
   }
 }
 
-#relationship p {
-  /* background: gold; */
-  font-family: var(--button-font);
+#zebra p, #relationship p {
   line-height: 30px;
+  font-family: var(--text-font);
   margin: 30px 0 40px 0;
 }
 
 @media (max-width: 480px) {
-  #relationship p {
+  #zebra p, #relationship p {
     text-align: center;
   }
 }
 
-#relationship button {
+#zebra button, #relationship button {
   width: 25%;
   padding: 15px;
   background: var(--dark-green);
   color: var(--white);
   border: none;
   text-transform: uppercase;
-  font-family: var(--text-font);
+  font-family: var(--button-font);
 }
 
 @media (max-width: 480px) {
-  #relationship button {
+  #zebra button, #relationship button {
     width: 40%;
   }
 }
-
-.zebra {
-  display: flex;
-  height: 60vh;
-  width: 100%;
-}
-
-.zebra-img {
-  background: url('https://psd.hackeryou.com/assignment1-assets/animal-land/image-7.jpg');
-  background-size: cover;
-  width: 50%;
-}
-
-
 
 /* Footer */
 footer {
@@ -718,7 +646,6 @@ footer .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background: firebrick; */
 }
 
 @media (max-width: 480px) {
@@ -729,6 +656,7 @@ footer .wrapper {
 
 .nav-footer {
   line-height: 30px;
+  width: auto;
 }
 
 @media (max-width: 480px) {
@@ -737,16 +665,21 @@ footer .wrapper {
   }
 }
 
+#footer ul {
+  display: flex;
+  text-transform: uppercase;
+  flex-direction: column;
+}
+
 @media (max-width: 480px) {
   #footer ul {
-    flex-direction: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     text-transform: uppercase;
   }
 }
 
 #form {
-  /* background: hotpink; */
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -760,37 +693,31 @@ footer .wrapper {
   }
 }
 
-@media (max-width: 480px) {
-  .form-controls {
-    flex-wrap: wrap;
-  }
-}
-
 #form input[type='email'] {
   width: 100%;
   height: 40px;
 }
 
 #form h4 {
-  font-family: var(--text-font);
+  font-family: var(--button-font);
   font-size: 1.3rem;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
 
 #form p {
-  font-family: var(--button-font);
+  font-family: var(--text-font);
   margin-bottom: 10px;
 }
 
 #form input[type='submit'] {
-  background: #000;
+  background: var(--black);
   color: var(--white);
   border: none;
   padding: 10px;
   width: 200px;
   font-size: 1rem;
-  font-family: var(--text-font);
+  font-family: var(--button-font);
 }
 
 @media (max-width: 480px) {
@@ -801,7 +728,7 @@ footer .wrapper {
 }
 
 .contact li {
-  font-family: var(--button-font);
+  font-family: var(--text-font);
   line-height: 30px;
   text-align: right;
 }
@@ -816,7 +743,7 @@ footer .wrapper {
   text-align: right;
   font-size: 1.4rem;
   margin-bottom: 10px;
-  font-family: var(--text-font);
+  font-family: var(--button-font);
   text-transform: uppercase;
 }
 
@@ -830,6 +757,13 @@ footer .wrapper {
 .form-controls {
   display: flex;
   width: 100%;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 480px) {
+  .form-controls {
+    flex-wrap: wrap;
+  }
 }
 
 footer h4, footer li, footer p {
@@ -837,10 +771,10 @@ footer h4, footer li, footer p {
 }
 
 .copyright {
-  background-color: #000;
+  background: #000;
   color: var(--white);
   padding: 10px 0;
   text-align: center;
 }
 
-/* Background image instead and implement wrapper */
+/* Background image instead and implement wrapper? */
