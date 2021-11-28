@@ -635,7 +635,12 @@ h1 {
 #relationship .heading {
   width: 80%;
   font-size: 2.5rem;
-  background: wheat;
+}
+
+@media (max-width: 480px) {
+  #relationship .heading {
+    font-size: 2rem;
+  }
 }
 
 #relationship img {
@@ -649,16 +654,28 @@ h1 {
 }
 
 #relationship .content-container {
-  background-color: crimson;
   width: calc(50% - 300px);
   padding: 200px 200px 200px 100px;
 }
 
+@media (max-width: 480px) {
+  #relationship .content-container {
+    width: 100%;
+    padding: 0;
+  }
+}
+
 #relationship p {
-  background: gold;
+  /* background: gold; */
   font-family: var(--button-font);
   line-height: 30px;
   margin: 30px 0 40px 0;
+}
+
+@media (max-width: 480px) {
+  #relationship p {
+    text-align: center;
+  }
 }
 
 #relationship button {
@@ -669,6 +686,12 @@ h1 {
   border: none;
   text-transform: uppercase;
   font-family: var(--text-font);
+}
+
+@media (max-width: 480px) {
+  #relationship button {
+    width: 40%;
+  }
 }
 
 .zebra {
@@ -698,8 +721,28 @@ footer .wrapper {
   /* background: firebrick; */
 }
 
+@media (max-width: 480px) {
+  footer .wrapper {
+    flex-direction: column;
+  }
+}
+
 .nav-footer {
   line-height: 30px;
+}
+
+@media (max-width: 480px) {
+  .nav-footer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #footer ul {
+    flex-direction: flex;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+  }
 }
 
 #form {
@@ -708,6 +751,19 @@ footer .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (max-width: 480px) {
+  #form {
+    width: 100%;
+    margin: 40px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-controls {
+    flex-wrap: wrap;
+  }
 }
 
 #form input[type='email'] {
@@ -719,7 +775,7 @@ footer .wrapper {
   font-family: var(--text-font);
   font-size: 1.3rem;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 #form p {
@@ -737,10 +793,23 @@ footer .wrapper {
   font-family: var(--text-font);
 }
 
+@media (max-width: 480px) {
+  #form input[type='submit'] {
+    width: 100%;
+    height: 50px;
+  }
+}
+
 .contact li {
   font-family: var(--button-font);
   line-height: 30px;
   text-align: right;
+}
+
+@media (max-width: 480px) {
+  .contact li {
+    text-align: center;
+  }
 }
 
 .contact h4 {
@@ -749,6 +818,13 @@ footer .wrapper {
   margin-bottom: 10px;
   font-family: var(--text-font);
   text-transform: uppercase;
+}
+
+@media (max-width: 480px) {
+  .contact h4 {
+    text-align: center;
+    margin-bottom: 0;
+  }
 }
 
 .form-controls {
