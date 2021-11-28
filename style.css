@@ -214,8 +214,7 @@ a {
   color: var(--white);
 }
 
-h1,
-li {
+h1 {
   text-transform: uppercase;
 }
 
@@ -296,6 +295,7 @@ li {
   padding: 20px;
   height: 10px;
   width: 30%;
+  text-transform: uppercase;
 }
 
 @media (max-width: 480px) {
@@ -358,6 +358,12 @@ li {
   padding: 100px 0;
 }
 
+@media (max-width: 480px) {
+  #suzies-story {
+    padding: 0;
+  }
+}
+
 .wrapperFlex {
   display: flex;
 }
@@ -381,14 +387,13 @@ li {
 }
 
 #suzies-story img {
-    height: 20rem;
     margin-right: 40px;
 }
 
 @media (max-width: 480px) {
   #suzies-story img {
     height: 18rem;
-    margin: auto;
+    padding: 40px 0;
     width: 100%;
   }
 }
@@ -402,6 +407,7 @@ li {
 @media (max-width: 480px) {
   #suzies-story h2 {
     font-size: 2rem;
+    margin-bottom: 10px;
   }
 }
 
@@ -422,22 +428,25 @@ li {
 
 @media (max-width: 480px) {
   #suzies-story button {
-    margin: auto;
+    margin: 40px auto;
     width: 40%;
     height: 30%;
+    padding: 10px;
   }
 }
 
-.content-container {
+#suzies-story .content-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 70%;
+  width: calc(70% - 40px);
+  margin-left: 40px;
 }
 
 @media (max-width: 480px) {
-  .content-container {
+  #suzies-story .content-container {
     width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -466,6 +475,13 @@ li {
     /* background-color: brown; */
 }
 
+@media (max-width: 480px) {
+  #friends h2 {
+    font-size: 2rem;
+    width: 60%;
+  }
+}
+
 .friends-gallery {
   display: flex;
 }
@@ -474,16 +490,28 @@ li {
   padding: 0 30px;
 }
 
+@media (max-width: 480px) {
+  .friends-gallery li:nth-of-type(3) {
+    display: none;
+  }
+}
+
 /* Links section */
 #links {
     background: var(--dark-green);
-    padding: 100px;
+    padding: 100px 0;
 }
 
 #links ul {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+
+@media (max-width: 480px) {
+  #links ul {
+    flex-direction: column;
+  }
 }
 
 .fas {
@@ -501,12 +529,19 @@ li {
   align-items: center;
 }
 
+@media (max-width: 480px) {
+  #links .link-container:nth-child(2) {
+    margin: 50px 0;
+  }
+}
+
 .link-container p {
   font-size: 1.5rem;
   color: var(--white);
   margin-top: 20px;
   /* background-color: cadetblue; */
   text-align: center;
+  text-transform: uppercase;
 }
 
 /* Zebra section */
@@ -514,27 +549,60 @@ li {
   display: flex;
 }
 
+@media (max-width: 480px) {
+  #zebra {
+    flex-direction: column-reverse;
+  }
+} 
+
 #zebra img {
   width: 50%;
 }
 
+@media (max-width: 480px) {
+  #zebra img {
+    width: 100%;
+  }
+}
+
 #zebra .heading {
   font-size: 2.5rem;
-  background: wheat;
+  /* background: wheat; */
+  color: var(--dark-green);
   width: 80%;
 }
 
+@media (max-width: 480px) {
+  #zebra .heading {
+    text-align: center;
+    width: 80%;
+    font-size: 2rem;
+  }
+}
+
 #zebra .content-container {
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   width: calc(50% - 300px);
   padding: 200px 100px 200px 200px;
 }
 
+@media (max-width: 480px) {
+  #zebra .content-container {
+    width: 100%;
+    padding: 0;
+  }
+}
+
 #zebra p {
-  background: gold;
   line-height: 30px;
   font-family: var(--button-font);
   margin: 30px 0 40px 0;
+}
+
+@media (max-width: 480px) {
+  #zebra p {
+    text-align: center;
+  }
 }
 
 #zebra button {
@@ -547,9 +615,21 @@ li {
   font-family: var(--text-font);
 }
 
+@media (max-width: 480px) {
+  #zebra button {
+    width: 40%;
+  }
+}
+
 /* Relationship section */
 #relationship {
   display: flex;
+}
+
+@media (max-width: 480px) {
+  #relationship {
+    flex-direction: column;
+  }
 }
 
 #relationship .heading {
@@ -560,6 +640,12 @@ li {
 
 #relationship img {
   width: 50%;
+}
+
+@media (max-width: 480px) {
+  #relationship img {
+    width: 100%;
+  }
 }
 
 #relationship .content-container {
@@ -596,6 +682,8 @@ li {
   background-size: cover;
   width: 50%;
 }
+
+
 
 /* Footer */
 footer {
@@ -652,7 +740,6 @@ footer .wrapper {
 .contact li {
   font-family: var(--button-font);
   line-height: 30px;
-  text-transform: lowercase;
   text-align: right;
 }
 
@@ -671,6 +758,13 @@ footer .wrapper {
 
 footer h4, footer li, footer p {
   color: var(--white);
+}
+
+.copyright {
+  background-color: #000;
+  color: var(--white);
+  padding: 10px 0;
+  text-align: center;
 }
 
 /* Background image instead and implement wrapper */
