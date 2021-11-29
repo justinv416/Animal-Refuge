@@ -270,7 +270,7 @@ header {
 #header h1 {
   font-size: 6rem;
   font-weight: normal;
-  color: white;
+  color: var(--white);
   line-height: 117px;
   margin-top: 200px;
   text-align: center;
@@ -329,12 +329,12 @@ header {
   }
 }
 
-.fa-bars {
+#hamburger {
   display: none;
 }
 
 @media (max-width: 480px) {
-  .fa-bars {
+  #hamburger {
     display: block;
     margin-top: 10px;
   }
@@ -597,7 +597,6 @@ header {
 
 #zebra .wrapper, #relationship .wrapper {
   width: 80%;
-  padding: 0 15%;
 }
 
 @media (max-width: 480px) {
