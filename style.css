@@ -468,7 +468,7 @@ header {
     margin: auto;
     color: var(--dark-green);
     margin-bottom: 50px;
-    width: 30%;
+    max-width: 30%;
 }
 
 @media (max-width: 480px) {
@@ -487,6 +487,12 @@ header {
 }
 
 @media (max-width: 480px) {
+  .friends-gallery li:nth-of-type(2) {
+    margin: 0 0 0 40px;
+  }
+}
+
+@media (max-width: 480px) {
   .friends-gallery li:nth-of-type(3) {
     display: none;
   }
@@ -495,18 +501,20 @@ header {
 /* Links section */
 #links {
     background: var(--dark-green);
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
-#links ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+#links .wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 @media (max-width: 480px) {
-  #links ul {
+  #links .wrapper {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -516,16 +524,36 @@ header {
 }
 
 .link-container {
-  max-width: 100%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.link-container:nth-of-type(1) p {
+@media (max-width: 480px) {
+  .link-container {
+    width: 100%;
+  }
+}
+
+/* @media (max-width: 480) {
+  #links {
+    background-color: #c3d3cb;
+    margin: 20px 0;
+  }
+} */
+
+.link-container p {
   width: 90%;
 }
+
+@media (max-width: 480px) {
+  #links li:nth-child(2) {
+      margin: 50px 0;
+  }
+}
+
 
 @media (max-width: 480px) {
   #links .link-container:nth-child(2) {
@@ -571,17 +599,18 @@ header {
 }
 
 #zebra .heading, #relationship .heading {
-  font-size: 2.5rem;
-  /* background: wheat; */
-  color: var(--dark-green);
   width: 80%;
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: var(--dark-green);
 }
 
 @media (max-width: 480px) {
-  #zebra .heading {
+  #zebra .heading, #relationship .heading {
     text-align: center;
-    width: 80%;
+    width: 100%;
     font-size: 2rem;
+    margin-top: 50px;
   }
 }
 
@@ -597,6 +626,15 @@ header {
 
 #zebra .wrapper, #relationship .wrapper {
   width: 80%;
+}
+
+@media (max-width: 480px) {
+  #zebra .wrapper, #relationship .wrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -631,7 +669,8 @@ header {
 
 @media (max-width: 480px) {
   #zebra button, #relationship button {
-    width: 40%;
+    width: 50%;
+    margin-bottom: 60px;
   }
 }
 
@@ -678,11 +717,21 @@ footer .wrapper {
   }
 }
 
+@media (max-width: 480px) {
+  #footer ul:nth-child(2) {
+    font-size: 0.9rem;
+    font-weight: bold;
+    flex-direction: column;
+    text-transform: lowercase;
+  }
+}
+
 #form {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 40px 0; 
 }
 
 @media (max-width: 480px) {
@@ -695,6 +744,12 @@ footer .wrapper {
 #form input[type='email'] {
   width: 100%;
   height: 40px;
+}
+
+@media (max-width: 480px) {
+  #form input[type='email'] {
+    text-align: center;
+  }
 }
 
 #form h4 {
@@ -717,12 +772,32 @@ footer .wrapper {
   width: 200px;
   font-size: 1rem;
   font-family: var(--button-font);
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  #form input[type='submit'] {
+      font-family: var(--text-font);
+  }
+}
+
+.form-controls {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 480px) {
+  .form-controls {
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 480px) {
   #form input[type='submit'] {
     width: 100%;
     height: 50px;
+    margin-top: 10px;
   }
 }
 
@@ -750,18 +825,6 @@ footer .wrapper {
   .contact h4 {
     text-align: center;
     margin-bottom: 0;
-  }
-}
-
-.form-controls {
-  display: flex;
-  width: 100%;
-  flex-wrap: nowrap;
-}
-
-@media (max-width: 480px) {
-  .form-controls {
-    flex-wrap: wrap;
   }
 }
 
